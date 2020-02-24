@@ -1,0 +1,13 @@
+button{
+	font-size: 20px;
+	color: white;
+	font-family: Roboto;
+	text-decoration: none;
+	font-weight: lighter;
+}
+
+button:hover{
+	cursor: pointer;
+	color: green;
+	border: green;
+}

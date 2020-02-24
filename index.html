@@ -1,11 +1,45 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-<title>First Git Repo!</title>
+	<title>First Git Repo!</title>
+	<meta charset="utf-8">
+
 </head>
 
 <body>
-<h1>Hello World!</h1>
+<h1>First Quiz</h1>
+
+<button onclick="firstFunction(0)">Click Me</button>
+<button onclick="firstFunction(1)">Click Me Too</button>
+<button onclick="firstFunction(2)">Also Click Me Too</button>
+<button onclick="firstFunction(3)">Click Me!!!</button>
+
+	<script>
+
+	function firstFunction(quizVal) {
+
+		value = quizVal;
+
+		switch(value){
+			case 0:
+				console.log('a hike');
+				//document.getElementById('someContent').innerHTML = '<h3>a hike</h3>';
+				break;
+			case 1:
+				console.log('netflix and chill');
+				break;
+			case 2:
+				console.log('wine');
+				break;
+			case 3:
+				console.log('dinner and a movie');
+				break;1
+		}
+	}
+
+	</script>
+
 </body>
 
 </html>

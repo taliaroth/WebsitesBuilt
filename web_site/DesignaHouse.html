@@ -1,0 +1,218 @@
+<DOCTYPE html>
+
+<html>
+
+
+<head>
+	<title>Design a House</title>
+	<meta charset = "utf-8">
+</head>
+
+<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+
+
+<body style = "color: rgb(250,250,250); background: rgb(120,183,185)">
+
+<h1 style = "font-family: montserrat">Design a House and We'll Tell You You're Fortune</h1>
+
+
+
+<h3 style = "font-family: montserrat">Pick a Front Door</h3>
+
+	<button class="first_button" onclick="firstFunction(0)">
+		<img src="img/front_0.jpg" width="200" height="200"/>
+	</button>
+
+	<button class="first_button" onclick="firstFunction(1)">
+		<img src="img/front_1.jpg" width="200" height="200"/>
+	</button>
+
+	<button class="first_button" onclick="firstFunction(2)">
+		<img src="img/front_2.jpg" width="200" height="200"/>
+	</button>
+
+	<button class="first_button" onclick="firstFunction(3)">
+		<img src="img/front_3.jpg" width="200" height="200"/>
+	</button>
+
+
+
+<script>
+
+	count = 0;
+
+	function firstFunction(quizVal) {
+
+	value = quizVal;
+
+	switch(value){
+		case 0:
+			console.log('classy');
+			//document.getElementById('someContent').innerHTML = '<h3>a hike</h3>';
+			break;
+		case 1:
+			console.log('chill');
+			break;
+		case 2:
+			console.log('fun');
+			break;
+		case 3:
+			console.log('lazy');
+			break;1
+		}
+		count = count + value;
+		  var bb = document.getElementsByClassName('first_button');
+        for (var i = 0; i < bb.length; i++) {
+            bb[i].disabled = "False";
+        }
+
+	}
+
+
+</script>
+
+
+
+<h3 style = "font-family: montserrat">Pick a Kitchen</h3>
+
+	<button class="second_button" onclick="secondFunction(0)">
+		<img src="img/kitchen_0.jpg" width="200" height="200"/>
+	</button>
+
+	<button class="second_button" onclick="secondFunction(1)">
+		<img src="img/kitchen_1.jpg" width="200" height="200"/>
+	</button>
+
+	<button class="second_button" onclick="secondFunction(2)">
+		<img src="img/kitchen_2.jpg" width="200" height="200"/>
+	</button>
+
+	<button class="second_button" onclick="secondFunction(3)">
+		<img src="img/kitchen_3.jpg" width="200" height="200"/>
+	</button>
+
+
+
+<script>
+
+function secondFunction(quizVal) {
+
+	value = quizVal;
+
+	switch(value){
+		case 0:
+			console.log('extra');
+			//document.getElementById('someContent').innerHTML = '<h3>a hike</h3>';
+			break;
+		case 1:
+			console.log('cool');
+			break;
+		case 2:
+			console.log('extravagant');
+			break;
+		case 3:
+			console.log('dopey');
+			break;1
+	}
+	 count = count + value;
+	 var bb = document.getElementsByClassName('second_button');
+      for (var i = 0; i < bb.length; i++) {
+            bb[i].disabled = "False";
+        }
+}
+
+
+
+</script>
+
+
+<h3 style = "font-family: montserrat">Pick a Bedroom</h3>
+
+	<button class="third_button" onclick="thirdFunction(0)">
+		<img src="img/bed_0.jpg" width="200" height="200"/>
+	</button>
+
+	<button class="third_button" onclick="thirdFunction(1)">
+		<img src="img/bed_1.jpg" width="200" height="200"/>
+	</button>
+
+	<button class="third_button" onclick="thirdFunction(2)">
+		<img src="img/bed_2.jpg" width="200" height="200"/>
+	</button>
+
+	<button class="third_button" onclick="thirdFunction(3)">
+		<img src="img/bed_3.jpg" width="200" height="200"/>
+	</button>
+
+
+
+<script>
+
+function thirdFunction(quizVal) {
+
+	value = quizVal;
+
+	switch(value){
+		case 0:
+			console.log('candid');
+			//document.getElementById('someContent').innerHTML = '<h3>a hike</h3>';
+			break;
+		case 1:
+			console.log('funky');
+			break;
+		case 2:
+			console.log('nice');
+			break;
+		case 3:
+			console.log('lame');
+			break;1
+	}
+
+	count = count + value;
+	 var bb = document.getElementsByClassName('third_button');
+      for (var i = 0; i < bb.length; i++) {
+            bb[i].disabled = "False";
+        }
+
+	
+}
+
+</script>
+
+
+<script>
+
+  function finishquiz(quizVal) {
+	
+	if (count <= 3) {
+      
+      return("You will marry a goose <3");
+
+
+	}else if (count > 3 && count<=6) {
+		 return("You will have pizza with the Queen!");
+
+	}else{
+
+     return("You will discover an alien planet");
+	}
+}
+
+
+
+
+
+
+</script>
+
+
+	<button type= "submit" onclick="document.write(finishquiz())"> Submit</button>
+
+<script>
+</script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,64 @@
+<DOCTYPE html>
+
+<html>
+
+<head>
+	<title>First Quiz</title>
+	<meta charset = "utf-8">
+</head>
+
+<body>
+
+	<h2>Positive Affirmations</h2>
+	<button onclick=positiveAffirmation()>Give a Positive Statement</button>
+
+
+	<h2>Is it an Apple</h2>
+	<button onclick=isApple(fruit[1])>Test Your Fruit</button>
+
+
+
+	<div id="affirmation"></div>
+
+
+	<script>
+
+	var fruit = ['apple', 'orange', 'kiwi', 'pineapple'];
+
+	function positiveAffirmation(){
+
+		bePositiveText = "I'm smart. I'm pretty. And goddamn people like me";
+
+		total = 0;
+		while (total < 50) {
+			existingAffirms = document.getElementById('affirmation').innerHTML;
+			addedAffirms = bePositiveText + existingAffirms;
+			document.getElementById('affirmation').innerHTML = addedAffirms;
+			total = total+1;
+
+		}	
+
+	}
+
+
+function isApple(fruitElement){
+
+	if(fruitElement == 'apple'){
+		console.log('is apple!');
+		document.body.style.backgroundColor = 'red';
+	}
+
+	else {
+		console.log('not an apple')
+		document.body.style.backgroundColor = 'blue';
+	}
+
+}
+
+
+	</script>
+
+</body>
+
+
+</html>
