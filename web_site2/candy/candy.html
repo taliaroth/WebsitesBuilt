@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Candyland</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+<body style = "font-family: montserrat">
+
+<a href="../index.html">
+<h1>Candyland</h1>
+</a>
+
+<h2> Fill in the blanks </h2>
+
+<script>
+var random_images_array = ["Background_1.jpg", "Background_2.jpg", "Background_3.jpg"];
+
+function randomImageGen(imgAr, path) {
+    path = path || '../img/';
+    var num = Math.floor( Math.random() * imgAr.length );
+    var img = imgAr[ num ];
+    var imgStr = '<img src="' + path + img + '" alt = "">';
+    document.write(imgStr); document.close();
+}
+
+</script>
+
+
+<ul>
+	<li>Noun <input type="text" id="noun"><button class="randombutton" onclick="noun()"><img src="../img/RandomButton.jpg" width="40" height="40"/></button></li>
+
+	<li>Adjective: <input type="text" id="adjective"><button class="randombutton" onclick="adjective()"><img src="../img/RandomButton.jpg" width="40" height="40"/></button></li>
+
+	<li>Past tense Verb: <input type="text" id="verb"><button class="randombutton" onclick="verb()"><img src="../img/RandomButton.jpg" width="40" height="40"/></button></li>
+</ul>
+
+<button class="submit" id="submit-button">Submit</button><span class="text"id="story"></span>
+
+<button class="restart" id="restart-button"><a href="candy.html">Restart</a></button>
+
+<script type="text/javascript">randomImageGen(random_images_array);</script>
+
+
+
+
+<script>
+
+var adjective_button_hit = 0;
+var noun_button_hit =0;
+var verb_button_hit = 0;
+var randomAdjective;
+var adjective_button_hit;
+var noun_button_hit;
+var verb_button_hit;
+//////////////////////
+  function adjective(){
+
+     adjective_button_hit = 1;
+    var adjective_holder = ["angry", "bewildered", "clumsy", "defeated", "embarrassed", "fierce", "grumpy", "helpless", "itchy", "jealous", "lazy", "mysterious", "nervous", "obnoxious", "panicky", "pitiful", "repulsive", "scary", "thoughtless", "uptight", "worried", "aggressive", "agreeable", "ambitious", "brave", "calm", "delightful", "eager", "faithful", "gentle", "happy", "jolly", "kind", "lively", "nice", "obedient", "polite", "proud", "silly", "thankful", "victorious", "witty", "wonderful", "zealous"];
+    randomAdjective = adjective_holder[Math.floor(Math.random() * adjective_holder.length)];
+
+    var texbox_adjective = document.getElementById("adjective");
+    texbox_adjective.value = randomAdjective;
+}
+
+
+function noun(){
+
+     noun_button_hit = 1;
+    var noun_holder = ["Actors", "Gold", "Paintings", "Advertisements", "Grass", "Parrots", "Afternoons", "Greece", "Pencils", "Airports", "Guitars", "Pianos", "Ambulances", "Hair", "Pillows", "Animals", "Hamburgers", "Pizza", "Answers", "Helicopters","Planets", "Apples", "Helmets", "Plastic", "Army", "Holidays", "Portugal", "Dogs", "Lunch", "Toothbrushes", "Dreams", "Machines", "Traffic", "Dresses", "Magazines", "Trains", "Easter", "Magicians", "Trucks", "Eggs", "Manchester", "Uganda", "Eggplant", "Markets", "Umbrellas", "Egypt", "Matches", "Vans", "Elephants", "Microphones", "Vases", "Energy", "Monkies", "Vegetables", "Engines", "Morning", "Vultures", "England", "Motorcycles", "Walls", "Evenings", "Nails", "Whales", "Eyes", "Napkins", "Windows"];
+    randomNoun = noun_holder[Math.floor(Math.random() * noun_holder.length)];
+
+    var texbox_noun = document.getElementById("noun");
+    texbox_noun.value = randomNoun;
+}
+
+function verb(){
+
+     verb_button_hit = 1;
+    var verb_holder = ["beat", "became", "began", "bent", "bet", "bid", "bit", "blew", "broke", "brought", "built", "burned", "bought", "caught", "forgave", "froze", "gave", "went", "grew", "hung", "hid", "hit", "held", "hurt", "kept", "knew", "learned", "ate", "smoked", "created", "painted", "drank", "felt", "played", "trained", "saw", "snuck", "dunked", "cheated", "cooked", "screamed"];
+    randomVerb = verb_holder[Math.floor(Math.random() * verb_holder.length)];
+
+    var texbox_verb = document.getElementById("verb");
+    texbox_verb.value = randomVerb;
+}
+
+////////////////
+
+    var submitButton = document.getElementById('submit-button');
+    var submit = function() {
+        var storyDiv = document.getElementById("story");
+
+        var noun_from_user = document.getElementById("noun").value;
+        var adjective_from_user = document.getElementById("adjective").value;
+        var verb_from_user = document.getElementById("verb").value;
+
+
+    var adjective;
+    var noun;
+    var verb;
+
+    if (adjective_button_hit==1) {
+        adjective = randomAdjective
+    } else{
+        adjective = adjective_from_user
+    }
+
+    if (noun_button_hit==1) {
+        noun = randomNoun
+    } else{
+        noun = noun_from_user
+    }
+
+
+      if (verb_button_hit==1) {
+        verb = randomVerb
+    } else{
+        verb = verb_from_user
+    }
+
+
+
+       storyDiv.innerHTML = "There was a house made of "
+       +noun+ ". Two " +adjective+ " children went inside and " + verb + " everything.";
+       /*storyDiv.innerHTML = "There was a house made of ";
+       answerDiv.innerHTML = noun;
+       storyDiv.innerHTML = ". Two ";
+       answerDiv.innerHTML = adjective;
+       storyDiv.innerHTML = " children went inside and ";
+       answerDiv.innerHTML = verb;
+       storyDiv.innerHTML = " everything.";*/
+
+
+    };
+
+    submitButton.addEventListener('click', submit);
+        
+</script>
+
+
+
+
+</body>
+</html>
+
+
+</body>
+</html>

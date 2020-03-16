@@ -1,0 +1,125 @@
+<html>
+
+<head>
+
+	<title>A Canvas</title>
+	<meta charset = "utf=8">
+
+	<style>
+		body{
+			background: red;
+		}
+
+		canvas{
+			border:1px black;
+		}
+	</style>
+
+
+</head>	
+
+<body onload="createLineObjs('acanvas')">
+
+	<button onclick="drawLines(lines)">Create Line Array</button>
+	<button onclick="timeDrawLines(lines)">TimeDraw</button>
+	<button onclick="timeEraseLines(lines)">TimeErase</button>
+
+	<canvas id="acanvas" height="400" width="400"> </canvas>
+
+<script>
+
+var canvas = document.getElementById('acanvas');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(400,400);
+ctx.stroke();
+
+ctx.fillRect(25, 25, 100, 100);
+ctx.clearRect(45,45,60,60);
+ctx.lineWidth = 10;
+ctx.strokeRect(55,55,40,40);
+
+
+
+var lineObj = {
+	startX: 10,
+	startY: 0,
+	finishX: 10,
+	finishY: 400,
+	drawLine: function(){
+		ctx.beginPath();
+		ctx.moveTo(this.startX, this.startY);
+		ctx.lineTo(this.finishX, this.finishY);
+		ctx.stroke();
+	}
+}
+
+lineObj.drawLine();
+
+function createLineObj(startX, startY, finishX, finishY, context) {
+	this.startX = startX;
+	this.startY = startY;
+	this.finishX = finishX;
+	this.finishY = finishY;
+	this.context = context
+	this.drawLine = function(){
+		this.context.beginPath();
+		this.context.moveTo(this.startX,this.startY);
+		this.context.lineTo(this.finishX,this.finishY);
+		this.context.stroke();
+	}
+	this.eraseLine = function(){
+		this.context.beginPath();
+		this.context.moveTo(this.startX, this.startY);
+		this.context.lineTo(this.finishX, this.finishY);
+		this.context.strokeStyle = 'red';
+		this.context.stroke();
+	}
+}
+
+line1 = new createLineObj(15,0,15,400,ctx);
+console.log(line1);
+line1.drawLine();
+
+
+x = 0;
+var lines = [];
+
+function createLineObjs(canvasID){
+	canvas = document.getElementById(canvasID);
+	ctx = canvas.getContext('2d');
+	width = canvas.width;
+	line1 = new createLineObj(x,0,x,400,ctx);
+	while(x < width){
+		lines[x] = new createLineObj(x,0,x,400,ctx);
+		x++;
+	}
+}
+
+function drawLines(array){
+	array = array;
+	for(x in array){
+		array[x].drawLine;
+	}
+}
+
+var i=0
+howManyTimes = 400;
+function timeDrawLines(){
+	lines[i].drawLine();
+	i++;
+	if(i<howManyTimes){
+		setTimeout(timeDrawLines,100);
+	}
+}
+
+
+
+
+</script>
+
+</body>
+
+</html>
