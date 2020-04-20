@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" href="img/favicon_2.png" type="image/png" sizes="16x16">
+
+	<title> BigMusicClub </title>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+
+		function compareArtist(a, b) {
+			if (a.artist < b.artist) {
+				return -1;
+			}
+			if (a.artist > b.artist) {
+				return 1;
+			}
+			return 0;
+		}
+
+		function compareDateThenArtist(a, b) {
+			if (a.date < b.date) {
+				return -1;
+			}
+			if (a.date > b.date) {
+				return 1;
+			}
+			return compareArtist(a, b);
+		}
+
+		function showUpcomingEvents(events) {
+			today = new Date().toISOString().split("T")[0];
+			console.log(today);
+			upcomingEvents = events.filter(e => e.date >= today);
+			// upcomingEvents = events
+			console.log(`Number of events occurring after today: ${upcomingEvents.length}`);
+			if (upcomingEvents.length == 0) {
+				$('#upcoming').empty().append(`No upcoming events`)
+			} else {
+				numEvents = 4
+				upcomingEvents = upcomingEvents.slice(0, numEvents);
+				$('#upcoming').empty();
+				upcomingEvents.forEach(e => {
+					$('#upcoming').append(`${e.date} ${e.artist} <br/>`)
+				})
+			}
+		}
+
+		function showBigHallEvents(events) {
+			// get the element to make sure it's already there
+			document.getElementById("bighall");
+			$('#bighall').empty();
+			events.forEach(e => {
+				$('#bighall').append(`
+				<h4>${e.date} ${e.artist}</h4>
+				<div><h5>${e.show_time} <br/> ${e.city}, ${e.state} <br/> $${e.price} USD ea.</h5></div>	
+				`)
+			});
+		}
+
+		function showLittleCafeEvents(events) {
+			// get the element to make sure it's already there
+			document.getElementById("littlecafe");
+			$('#littlecafe').empty();
+			events.forEach(e => {
+				console.log(e);
+				$('#littlecafe').append(`
+				<h4>${e.date} ${e.artist}</h4>
+				<div><h5>${e.show_time} <br/> ${e.city}, ${e.state} <br/> $${e.price} USD ea.</h5></div>	
+				`)
+			});
+		}
+
+		function showSmokeyClubEvents(events) {
+			// get the element to make sure it's already there
+			document.getElementById("smokeyclub");
+			$('#smokeyclub').empty();
+			events.forEach(e => {
+				console.log(e);
+				$('#smokeyclub').append(`
+				<h4>${e.date} ${e.artist}</h4>
+				<div><h5>${e.show_time} <br/> ${e.city}, ${e.state} <br/> $${e.price} USD ea.</h5></div>	
+				`)
+			});
+		}
+
+
+		function showAllEvents(events) {
+			console.log(events);
+
+			bighall = events.filter(d => d.venue == "Big Hall");
+			littlecafe = events.filter(d => d.venue == "Little Café");
+			smokeyclub = events.filter(d => d.venue == "Smokey Club");
+			console.log(bighall);
+			console.log(littlecafe);
+			console.log(smokeyclub);
+
+			showUpcomingEvents(events);
+
+	
+			showBigHallEvents(bighall);
+
+			showLittleCafeEvents(littlecafe);
+			
+			showSmokeyClubEvents(smokeyclub);
+		}
+
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			$.get("https://blmak.github.io/BigMusicClubConclomerateDates.json",
+				function (events, status) {
+					if (status == 'success') {
+						events = events.sort(compareDateThenArtist);
+						showAllEvents(events);
+
+						$(".flipBH").click(function () {
+							$(".dropDownBH").slideToggle("slow");
+
+						});
+
+
+
+						$(".accordionBH").accordion({
+							collapsible: true,
+							active: false,
+                            event: "mouseover",
+
+						}).on('mouseleave', function () {
+                $(this).accordion("option", "active", false);
+            });
+
+
+						$(".flipLC").click(function () {
+							$(".dropDownLC").slideToggle("slow");
+						});
+
+						$(".accordionLC").accordion({
+							collapsible: true,
+							active: false,
+                            event: "mouseover",
+
+						}).on('mouseleave', function () {
+                $(this).accordion("option", "active", false);
+            });
+
+						$(".flipSC").click(function () {
+							$(".dropDownSC").slideToggle("slow");
+						});
+
+						$(".accordionSC").accordion({
+							collapsible: true,
+							active: false,
+                            event: "mouseover",
+
+						}).on('mouseleave', function () {
+                $(this).accordion("option", "active", false);
+            });
+
+					}
+					else {
+						alert('no sucess');
+					}
+				});
+
+		});
+	</script>
+
+
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+
+
+<body>
+
+	<h1 class="BMC"> BigMusicClub </h1>
+
+	<h2 class="events"> Upcoming Events </h2>
+	<div class="hlevents"></div>
+
+	<img class="concert" src="img/ConcertPhoto.png" width="318" height="204" />
+
+	<h3 class="list1" id="upcoming"> </h3>
+
+
+<!-- Big Hall -->
+
+	<div class="flipBH">
+		<img class="recordBH" src="img/favicon_2.png" width="63" height="63" />
+		<h2 class="bighall"> Big Hall </h2>
+		<div class="hlBigHall"></div>
+	</div>
+
+
+	<div class="dropDownBH">
+		<div class="accordionBH" id=bighall>
+			<h4> </h4>
+			<div>
+				<h5></h5>
+			</div>
+		</div>
+	</div>
+
+
+
+<!-- Little Cafe -->
+
+	<div class="flipLC">
+		<img class="recordLC" src="img/favicon_2.png" width="63" height="63" />
+		<h2 class="littlecafe"> Little Cafe </h2>
+		<div class="hlLittleCafe"></div>
+	</div>
+
+	<div class="dropDownLC">
+		<div class="accordionLC" id="littlecafe">
+			<h4> </h4>
+				<div>
+				   <h5></h5>
+				</div>
+		</div>
+	</div>
+
+
+
+<!-- Smokey Club -->
+
+	<div class="flipSC">
+		<img class="recordSC" src="img/favicon_2.png" width="63" height="63" />
+		<h2 class="smokeyclub"> Smokey Club </h2>
+		<div class="hlSmokeyClub"></div>
+	</div>
+
+	<div class="dropDownSC">
+		<div class="accordionSC" id="smokeyclub">
+			<h4> </h4>
+				<div>
+				   <h5></h5>
+				</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
