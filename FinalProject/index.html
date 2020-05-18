@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="recipes.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<script>	
+
+$(document).ready(function () {
+	$('#input').val("");
+	$('#input').on('keydown',function(yay) {
+		console.log(`key pressed ${yay.key}`)
+    	if(yay.key == 'Enter') {
+			console.log(`Pressed Enter, value is ${$('#input').val()} `);
+        	navigateToRecipePage($('#input').val(), 'ingredients');
+    	}
+	});
+});
+
+</script>
+
+</head>
+
+
+<body>
+
+<a href="https://girlbeheard.org/gbh-news/2020/4/8/girl-be-heard-life-resources">
+	<div class="whiteBox">
+		<p class="centerText"> We care about your safety.  Here's a list of resources to help during the current pandemic. </p>
+	</div>
+</a>
+
+
+<! –– Navigation Menu ––>
+
+<div class="navigation">
+
+	<button type="button" onclick="navigateToRecipePage('appetizer', 'type')" class="navigationMargin"> <img type="button" src="img/Food_Cheese.png" width="66" height="57"/> </button>
+
+	<button type="button" onclick="navigateToRecipePage('main course', 'type')" class="navigationMargin"> <img src="img/Food-Burger.png" width="66" height="57" /> </button>
+
+	<button type="button" onclick="navigateToRecipePage('beverage', 'type')" class="navigationMargin"> <img src="img/Food_Beverage.png" width="63" height="77" /> </button>
+	
+	<button type="button" onclick="navigateToRecipePage('dessert', 'type')" class="navigationMargin"> <img src="img/Food_Macaron.png" width="66" height="57" /> </button>
+</div>
+
+<div class="navigationTextPosition">
+	<p class="navigationText"> APPETIZER </p>
+	<p class="navigationText" id="dairy"> MAIN COURSE </p>
+	<p class="navigationText"> BEVERAGE </p>
+	<P class="navigationText"> DESSERT </P>
+</div>
+
+
+
+
+<! –– Text ––>
+
+<h1 class="centerText"> <div class="propertyInline" id="marginH1"> LOW ON GROCERIES? </h1>
+
+<h2 class="centerText"> <div class="propertyInline"> Enter the ingredients you want to use </br>
+and we’ll find great recipes for you! </h2>
+
+
+
+<! –– Search bar ––>
+<div class="searchBar">
+	<input id="input" type="text">
+</div>
+
+<h5 class="centerText">(psst! Don’t forget to use commas to separate the items!) </h5>
+
+<h2 class="centerText"> Or... Use the icons above to search a category!</h2>
+
+</body>
+
+
+</html>

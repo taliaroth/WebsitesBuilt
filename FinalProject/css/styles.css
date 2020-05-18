@@ -1,0 +1,161 @@
+
+@font-face{
+	src: url(../font/BrandonText-Regular.otf);
+	font-family: BrandonRegular;
+}
+
+@font-face{
+	src: url(../font/BrandonText-Medium.otf);
+	font-family: BrandonMedium;
+}
+
+@font-face{
+	src: url(../font/BrandonText-Light.otf);
+	font-family: BrandonLight;
+}
+
+@font-face{
+	src: url(../font/Didot-HTF-M11-Medium.otf);
+	font-family: Didot;
+}
+
+
+body{
+	background: #CDBDFF;
+	color: black;
+}
+
+h1{
+	font-family: BrandonMedium;
+	font-size: 35pt;
+}
+
+h2{
+	font-family: BrandonMedium;
+	font-size: 33pt;
+}
+
+h3{
+	font-family: Didot;
+	font-size: 29pt;
+}
+
+h4{
+	font-family: BrandonRegular;
+	font-size: 30pt;
+}
+
+h5{
+	font-family: BrandonLight;
+	font-size: 22pt;
+}
+
+p{
+	font-family: Didot;
+	font-size: 12.4pt;
+}
+
+.centerText{
+text-align: center;
+}
+
+.whiteBox {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+}
+
+.navigation{
+	padding-left: 50%;
+	margin-left: -430px;
+	padding-top: 10px;
+}
+
+.navigationMargin{
+	margin-left: 8.5%;
+}
+
+.navigationText{
+	text-align: center;
+	float: left;
+	margin-left: 42px;
+	margin-right: 42px;
+}
+
+.navigationTextPosition{
+	padding-left: 50%;
+	margin-left: -370px;
+}
+
+.dairy{
+padding-left: 18px;
+}
+
+
+.propertyInline{
+	display: inline-block;
+}
+
+input{
+	width: 768px;
+	height: 50px;
+	background-color: transparent;
+	font-family: Didot;
+	font-size: 29pt;
+	border-width: 3px;
+	border-color: black;
+}
+
+button{
+	background: transparent;
+	border: none;
+}
+
+
+.searchBar{
+	padding-left: 50%;
+	margin-left: -390px;
+}
+
+.foodImgSize{
+	object-fit: contain;
+	background-color: transparent;
+	width: 400px;
+}
+
+.noMargin{
+	margin: 0px;
+	color: black;
+}
+
+#width{
+	width: 400px;
+}
+
+.marginLeft{
+	margin-left: 25px;
+}
+
+#marginTop{
+	margin-top: 45px;
+}
+
+#marginH1{
+	margin-top: 50px;
+}
+
+#titleWidth{
+	width: 500px;
+}
+
+
+
+
+
+
+
+
+
+
