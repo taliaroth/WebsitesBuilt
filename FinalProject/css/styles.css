@@ -21,7 +21,7 @@
 
 
 body{
-	background: #CDBDFF;
+	background:linear-gradient(to bottom, white 0%, white 7%,#CDBDFF 0%, #CDBDFF 93%);
 	color: black;
 }
 
