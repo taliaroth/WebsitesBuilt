@@ -40,7 +40,7 @@ $(document).ready(function () {
 				if (recipes.length == 0){
 					console.log("no recipes found");
 					$('#results').append(`
-						<h2>We're sorry, we couldn't find anything that matches your search</h2>
+						<h4 id="noResult">We're sorry, we couldn't find anything that matches your search</h4>
 					`);
 				}
 
@@ -70,7 +70,7 @@ $(document).ready(function () {
 			if (recipes.length == 0){
 					console.log("no recipes found");
 					$('#results').append(`
-						<h2>We're sorry, we couldn't find anything that matches your search</h2>
+						<h4 id="noResult">We're sorry, we couldn't find anything that matches your search</h4>
 					`);
 				}
 

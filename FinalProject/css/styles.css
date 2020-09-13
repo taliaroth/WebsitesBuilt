@@ -124,7 +124,7 @@ button{
 .foodImgSize{
 	object-fit: contain;
 	background-color: transparent;
-	width: 400px;
+	width: 600px;
 }
 
 .noMargin{
@@ -137,7 +137,8 @@ button{
 }
 
 .marginLeft{
-	margin-left: 25px;
+	padding-left: 50%;
+	margin-left: -300px;
 }
 
 #marginTop{
@@ -150,6 +151,11 @@ button{
 
 #titleWidth{
 	width: 500px;
+}
+
+#noResult{
+	padding-left: 50%;
+	margin-left: -550px;
 }
 
 

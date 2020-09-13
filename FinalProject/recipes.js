@@ -2,9 +2,9 @@
 
 //Spoontaclur, the website I got the API from only allows 150 searches per day for free. If you want to change the number of answers returned, you cna change it, but don't make it too high.
 //You can switch between API keys if you run out of calls
-var number = 10;
-//var apiKey = "1156867767634ca4b74a435dd346c48d";
-var apiKey = "d60b2979d94d4ca7835395a14e9d85a5";
+var number = 4;
+var apiKey = "1156867767634ca4b74a435dd346c48d";
+//var apiKey = "d60b2979d94d4ca7835395a14e9d85a5";
 
 function getRecipesByUrl(url) {
 	return $.get(url)
