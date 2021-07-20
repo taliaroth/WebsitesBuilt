@@ -1,0 +1,172 @@
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight:200;
+    color: white;
+    font-size: 20px;;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color: white;
+    font-size: 25px;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    opacity: 70%;
+    display: block;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+body {
+    background-color: black;
+}
+
+.topnav{
+    position: center;
+    padding:30px 150px;
+}
+
+.HomePageImage{
+    padding-top: 60px;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+.hoverGreen:hover{
+    color: #3FCD0E;
+    display: inline-block;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.hoverBlue:hover{
+    color: #1A4DFF;
+    display: inline-block;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.hoverPink:hover{
+    color: #FF1A95;
+    display: inline-block;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.hoverYellow:hover{
+    color: #FFA31A;
+    display: inline-block;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.col-md-4{
+    padding: unset;
+}
+
+.textlength{
+    padding-left: 24%;
+    padding-right: 24%;
+}
+
+a{
+    color: white;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.linkhover{
+    color: #FF1A95;
+    display: inline-block;
+}
+
+.paddingBetweenImages{
+    padding-top: 3%
+}
+
+.paddingBottomofPage{
+    padding-bottom: 3%;
+}
+
+/*hover over images for titles */
+
+.container {
+    position: relative;
+    width: 100%;
+    padding: unset;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.container:hover .overlay {
+    opacity: 70%;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/*
+.img-opacity:hover{
+    color: black;
+    opacity: 30%;
+    transition: .5s;
+}*/
+
+/* What if Page
+.green-img:hover {
+    content: url('img_design/WhatIf/GreenStory.jpg');
+}
+
+.blue-img:hover {
+    content: url('img_design/WhatIf/BlueStory.jpg');
+}
+
+.purple-img:hover {
+    content: url('img_design/WhatIf/PurpleStory.jpg');
+}
+
+.red-img:hover {
+    content: url('img_design/WhatIf/RedStory.jpg');
+}
+
+.orange-img:hover {
+    content: url('img_design/WhatIf/OrangeStory.jpg');
+}
+*/
+

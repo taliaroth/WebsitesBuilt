@@ -1,0 +1,70 @@
+
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 176px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color: white;
+    font-size: 25px;
+}
+
+body {
+    background-color: black;
+}
+
+.topnav{
+    position: center;
+    padding:30px 150px;
+}
+
+.HomePageImage{
+    padding-top: 10px;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.hoverGreen:hover{
+    color: #3FCD0E;
+    display: inline-block;
+    transition: .3s;
+}
+
+.hoverBlue:hover{
+    color: #1A4DFF;
+    display: inline-block;
+    transition: .3s;
+}
+
+.hoverPink:hover{
+    color: #FF1A95;
+    display: inline-block;
+    transition: .3s;
+}
+
+.hoverYellow:hover{
+    color: #FFA31A;
+    display: inline-block;
+    transition: .3s;
+}
