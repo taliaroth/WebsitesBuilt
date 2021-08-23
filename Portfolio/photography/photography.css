@@ -99,7 +99,7 @@ img {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding: 3%;
     left: 0;
     top: 0;
     width: 100%;
@@ -174,9 +174,6 @@ img {
 }
 
 
-img {
-    margin-bottom: -4px;
-}
 
 .demo {
     opacity: 0.6;

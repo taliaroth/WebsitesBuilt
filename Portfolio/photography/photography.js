@@ -1,6 +1,7 @@
 
 
 
+
 function openModal() {
     document.getElementById("myModal").style.display = "block";
 }
@@ -8,6 +9,15 @@ function openModal() {
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
 }
+
+jQuery(document).keydown(function(e){
+    if (e.keyCode == 37) {
+        plusSlides(-1)
+    }
+    if (e.keyCode == 39) {
+        plusSlides(+1)
+    }
+});
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -37,6 +47,7 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
 
 /*
 Using getElementsByClassName() will return all the elements with that class name in a document
