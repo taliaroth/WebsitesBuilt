@@ -68,3 +68,21 @@ a:active { text-decoration: none; }
     display: inline-block;
     transition: .3s;
 }
+
+.bg-light {
+    background-color: transparent!important;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url(img/Logo_Colors.png)!important;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+}
+.navbar-toggler{
+    flex:auto;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 5rem;
+    padding-left: 5rem;
+    }

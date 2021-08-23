@@ -38,8 +38,6 @@ function showSlides(n) {
     captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-
-
 /*
 Using getElementsByClassName() will return all the elements with that class name in a document
  */

@@ -30,6 +30,10 @@ body {
     padding:30px 150px;
 }
 
+.bg-light {
+    background-color: transparent!important;
+}
+
 .HomePageImage{
     padding-top: 60px;
 }
@@ -96,6 +100,10 @@ a:active { text-decoration: none; }
     display: inline-block;
 }
 
+.linkhover:hover{
+    color: #FF1A95;
+}
+
 .paddingBetweenImages{
     padding-top: 3%
 }
@@ -141,32 +149,53 @@ a:active { text-decoration: none; }
     transform: translate(-50%, -50%);
     text-align: center;
 }
-/*
-.img-opacity:hover{
-    color: black;
-    opacity: 30%;
-    transition: .5s;
-}*/
 
-/* What if Page
-.green-img:hover {
-    content: url('img_design/WhatIf/GreenStory.jpg');
+
+
+.su-youtube {
+    margin: 0 auto;
+    display: block;
 }
 
-.blue-img:hover {
-    content: url('img_design/WhatIf/BlueStory.jpg');
+.row_groceries {
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    display: initial;
 }
 
-.purple-img:hover {
-    content: url('img_design/WhatIf/PurpleStory.jpg');
+.navbar-light .navbar-toggler-icon {
+    background-image: url(../img/Logo_Colors.png)!important;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
 }
 
-.red-img:hover {
-    content: url('img_design/WhatIf/RedStory.jpg');
+
+.row {
+    justify-content: center;
 }
 
-.orange-img:hover {
-    content: url('img_design/WhatIf/OrangeStory.jpg');
+.col-md-3{
+    flex: 0 0 25%;
+    max-width: 100%;
 }
-*/
+.navbar-toggler{
+    flex:auto;
+}
+
+.next_position{
+    text-align: right;
+    padding-left: 90%;
+}
+
+.next_position:hover{
+    color: #FF1A95;
+    transition: .4s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
 
