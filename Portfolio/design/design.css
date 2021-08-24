@@ -189,13 +189,27 @@ a:active { text-decoration: none; }
     padding-left: 90%;
 }
 
-.next_position:hover{
-    color: #FF1A95;
-    transition: .4s;
+.next_position{
+    text-align: left;
+    padding-right: 90%;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 5rem;
     padding-left: 5rem;
 }
+button {
+    outline: none !important;
+}
 
+.next-prev-align {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.next-previous-hover:hover{
+    color: #FF1A95;
+    transition: .4s;
+}
