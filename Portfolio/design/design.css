@@ -207,6 +207,7 @@ button {
     justify-content: space-between;
     padding-left: 5%;
     padding-right: 5%;
+    padding-top:5%
 }
 
 .next-previous-hover:hover{
