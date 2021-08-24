@@ -86,3 +86,7 @@ a:active { text-decoration: none; }
     padding-right: 5rem;
     padding-left: 5rem;
     }
+
+button {
+    outline: none !important;
+}

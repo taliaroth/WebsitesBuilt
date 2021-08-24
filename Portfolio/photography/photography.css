@@ -210,3 +210,7 @@ img#hover-shadow {
     padding-right: 5rem;
     padding-left: 5rem;
 }
+
+button {
+    outline: none !important;
+}
