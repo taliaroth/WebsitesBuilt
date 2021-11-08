@@ -2,14 +2,14 @@ h2{
     font-family: 'Roboto', sans-serif;
     font-weight:200;
     color: white;
-    font-size: 20px;;
+    font-size: 20px;
 }
 
 h3{
     font-family: 'Roboto', sans-serif;
-    font-weight:300;
+    font-weight:350;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 p{
@@ -50,26 +50,13 @@ a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
 
-.hoverGreen:hover{
-    color: #3FCD0E;
+.pink{
+    color: #FF1A95;
     display: inline-block;
-    transition: .3s;
-}
-
-.hoverBlue:hover{
-    color: #1A4DFF;
-    display: inline-block;
-    transition: .3s;
 }
 
 .hoverPink:hover{
     color: #FF1A95;
-    display: inline-block;
-    transition: .3s;
-}
-
-.hoverYellow:hover{
-    color: #FFA31A;
     display: inline-block;
     transition: .3s;
 }
@@ -139,4 +126,19 @@ a:active { text-decoration: none; }
 
 button {
     outline: none !important;
+}
+
+hr {
+    display: block;
+    margin-top: -0.10em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    border-color: white;
+}
+
+.descriptionPadding{
+    padding-top: 1%;
 }
