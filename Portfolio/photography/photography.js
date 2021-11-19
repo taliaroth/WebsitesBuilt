@@ -1,4 +1,10 @@
 
+document.addEventListener('load', function() {
+    var scale = 1 / (window.devicePixelRatio || 1);
+    var content = 'width=device-width, initial-scale=' + scale;
+
+    document.querySelector('meta[name="viewport"]').setAttribute('content', content)
+}, false)
 
 
 function openModal() {
@@ -8,6 +14,15 @@ function openModal() {
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
 }
+
+jQuery(document).keydown(function(e){
+    if (e.keyCode == 37) {
+        plusSlides(-1)
+    }
+    if (e.keyCode == 39) {
+        plusSlides(+1)
+    }
+});
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -37,6 +52,7 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
 
 /*
 Using getElementsByClassName() will return all the elements with that class name in a document

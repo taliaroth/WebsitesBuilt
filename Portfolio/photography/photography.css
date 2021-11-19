@@ -1,8 +1,8 @@
 h3{
     font-family: 'Roboto', sans-serif;
-    font-weight:300;
+    font-weight:350;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 body {
@@ -24,26 +24,13 @@ body {
     object-fit: cover;
 }
 
-.hoverGreen:hover{
-    color: #3FCD0E;
+.pink{
+    color: #FF1A95;
     display: inline-block;
-    transition: .3s;
-}
-
-.hoverBlue:hover{
-    color: #1A4DFF;
-    display: inline-block;
-    transition: .3s;
 }
 
 .hoverPink:hover{
     color: #FF1A95;
-    display: inline-block;
-    transition: .3s;
-}
-
-.hoverYellow:hover{
-    color: #FFA31A;
     display: inline-block;
     transition: .3s;
 }
@@ -99,7 +86,7 @@ img {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding: 3%;
     left: 0;
     top: 0;
     width: 100%;
@@ -174,9 +161,6 @@ img {
 }
 
 
-img {
-    margin-bottom: -4px;
-}
 
 .demo {
     opacity: 0.6;
@@ -212,4 +196,8 @@ img#hover-shadow {
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 5rem;
     padding-left: 5rem;
+}
+
+button {
+    outline: none !important;
 }

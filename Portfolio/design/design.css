@@ -2,14 +2,21 @@ h2{
     font-family: 'Roboto', sans-serif;
     font-weight:200;
     color: white;
-    font-size: 20px;;
+    font-size: 20px;
+}
+
+h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color: white;
+    font-size: 20px;
 }
 
 h3{
     font-family: 'Roboto', sans-serif;
-    font-weight:300;
+    font-weight:350;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 p{
@@ -43,29 +50,15 @@ body {
     height: auto;
 }
 
-.hoverGreen:hover{
-    color: #3FCD0E;
-    display: inline-block;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.hoverBlue:hover{
-    color: #1A4DFF;
-    display: inline-block;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.hoverPink:hover{
+.pink{
     color: #FF1A95;
     display: inline-block;
     text-decoration: none;
-    transition: .3s;
 }
 
-.hoverYellow:hover{
-    color: #FFA31A;
+
+.hoverPink:hover{
+    color: #FF1A95;
     display: inline-block;
     text-decoration: none;
     transition: .3s;
@@ -76,8 +69,8 @@ body {
 }
 
 .textlength{
-    padding-left: 24%;
-    padding-right: 24%;
+    padding-left: 19%;
+    padding-right: 19%;
 }
 
 a{
@@ -98,10 +91,6 @@ a:active { text-decoration: none; }
 .linkhover{
     color: #FF1A95;
     display: inline-block;
-}
-
-.linkhover:hover{
-    color: #FF1A95;
 }
 
 .paddingBetweenImages{
@@ -140,7 +129,7 @@ a:active { text-decoration: none; }
 .text {
     color: white;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 350;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -189,13 +178,43 @@ a:active { text-decoration: none; }
     padding-left: 90%;
 }
 
-.next_position:hover{
-    color: #FF1A95;
-    transition: .4s;
+.next_position{
+    text-align: left;
+    padding-right: 90%;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 5rem;
     padding-left: 5rem;
 }
+button {
+    outline: none !important;
+}
 
+.next-prev-align {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top:5%
+}
+
+.next-previous-hover:hover{
+    color: #FF1A95;
+    transition: .4s;
+}
+
+hr {
+    display: block;
+    margin-top: -0.10em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    border-color: white;
+}
+
+.descriptionPadding{
+    padding-top: 1%;
+}
