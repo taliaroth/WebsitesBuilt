@@ -5,3 +5,7 @@
 *.jpeg
 Portfolio/.idea/vcs.xml
 *.xml
+Portfolio/design/.DS_Store
+Portfolio/design/img_design/.DS_Store
+Portfolio/.DS_Store
+.DS_Store
